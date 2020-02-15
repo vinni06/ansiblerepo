@@ -24,7 +24,7 @@ node {
     }
     
     stage('Deployment into production'){
- 	 sh label: 'terraform', script: 'ansible-playbook -i /root/.jenkins/workspace/Terraform/Terrform/inventory -u ubuntu --key /root/.ssh/mkey.pem ./web-playbook.yaml'
+ 	 sh label: 'terraform', script: 'ansible-playbook -i /root/.jenkins/workspace/pipe-Terraform/inventory -u ubuntu --key /root/.ssh/mkey.pem ./web-playbook.yaml'
      }
   
    
