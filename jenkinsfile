@@ -10,7 +10,18 @@ node {
  
 // dir(project_path) {
 
-	//write the stages here
+	stage('Download package from JFrog') {
+            def server= Artifactory.server 'Artifactory'
+            def downloadSpec = """{
+            "files": [
+            {
+                "pattern": "capstoneproject/capstoneproject-0.0.1-SNAPSHOT.war",
+                "target": "./capstoneproject.war"
+            }
+            ]
+            }"""
+        server.download(downloadSpec)
+    }
   
    
 //}	-----------dir end---------  
