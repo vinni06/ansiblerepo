@@ -1,4 +1,7 @@
 ---
 # tasks file for web
-- name: Install Java 1.8
-  apt: name=default-jdk state=present
+- name: Create Dir to Downlaod Tomcat. 
+  file: path=/opt/SP/apps/tomcat state=directory
+
+- include: java.yml
+- include: tomcat.yml
