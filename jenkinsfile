@@ -3,7 +3,7 @@ node {
   notify('Job Started') 
      
   stage('Git-Checkout') {
-   git 'https://github.com/SaiCharanUppari/terraformrepo.git'
+   git 'https://github.com/SaiCharanUppari/ansiblerepo.git'
   }
     
  //def project_path="capstoneproject/capstoneproject/"
