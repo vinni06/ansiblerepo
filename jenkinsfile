@@ -23,10 +23,10 @@ node {
         server.download(downloadSpec)
     }
     
-    stage('Deployment into production'){
+   /* stage('Deployment into production'){
  	 sh label: 'terraform', script: 'ansible-playbook -i /root/.jenkins/workspace/pipe-Terraform/inventory -u ubuntu --key /root/.ssh/hkey.pem ./web-playbook.yaml'
      }
-  
+*/  
    
 //}	-----------dir end---------  
 
